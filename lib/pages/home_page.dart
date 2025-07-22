@@ -13,13 +13,13 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  //refernce to the hive box
+  //reference to the hive box
   final _myBox = Hive.box('mybox');
   ToDoDatabase db = ToDoDatabase();
 
   @override
   void initState() {
-    //is this is the first time opening the app then create defualt data
+    //is this is the first time opening the app then create default data
 
     if (_myBox.get('TODOLIST') == null) {
       db.createInitialData();
